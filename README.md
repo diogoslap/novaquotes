@@ -25,7 +25,7 @@ Also, you need to create an external url for you API, so you can use heroku, aws
 
 Put this url after you up the project:
 
-http://myhost-name/ - (Your slack commands must request the index - '/')
+http://myhost-name/quotes - (Your slack commands must request the quotes - '/quotes')
 
 ## Install project
 
