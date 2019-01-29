@@ -21,7 +21,7 @@ Important thing, when you create the slack command, don't forget to check the op
 /mycustomcommand my message by: @<author>
 ``
 
-Also, you need to create an external url for you API, so you can use heroku, aws, digital ocean and whatever you want, because it's a require from Slack command.
+Also, you need to create an external url for your API, so you can use heroku, aws, digital ocean and whatever you want, because it's a require from Slack command.
 
 Put this url after you up the project:
 
@@ -43,11 +43,11 @@ After that, install and start your project:
 npm install && npm start
 ``
 
-To see your quotes, access your address: http://myhost-name/quotes
+To see your quotes(if you send something), access your address: http://myhost-name/quotes
 
 ## Using Docker
 
-To use docker in your local machine, open the file docker-compose.yml and edit all variables such user, password, database and API_TOKEN.
+To use docker in your local machine, open the file docker-compose.yml and edit all variables such db_user, db_password, database and API_TOKEN.
 
 You need docker installed and docker-compose.
 
