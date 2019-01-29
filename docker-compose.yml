@@ -1,0 +1,39 @@
+version: '2'
+
+services:
+
+  postgres:
+    build: ./dockerfiles/postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=<username>
+      - POSTGRES_PASSWORD=<password>
+      - POSTGRES_DB=novaquotes
+    volumes:
+      - ./db/:/docker-entrypoint-initdb.d/
+  
+  api:
+    image: node:10.13.0
+    command: /bin/bash -c "npm install && npm start"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/usr/src/app
+    working_dir: /usr/src/app
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgres://<username>:<password>@postgres:5432/novaquotes
+      - API_TOKEN=<api-key-here>
+    depends_on:
+      - postgres
+    links:
+      - postgres
+
+  pgadmin:
+    image: fenglc/pgadmin4
+    ports:
+      - "5050:5050"
+    links:
+      - postgres
+      

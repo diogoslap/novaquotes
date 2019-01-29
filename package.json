@@ -1,0 +1,33 @@
+{
+  "name": "novaquotes",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "./node_modules/nodemon/bin/nodemon.js ./bin/www"
+  },
+  "keywords": [
+    "slack",
+    "novatics",
+    "heroku"
+  ],
+  "author": "diogoslap",
+  "license": "MIT",
+  "engines": {
+    "node": "10.x"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "ejs": "^2.6.1",
+    "ejs-locals": "^1.0.2",
+    "express": "~4.16.0",
+    "hjs": "~0.0.6",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "nodemon": "^1.18.9",
+    "pg": "^7.8.0",
+    "pg-bricks": "^0.6.0"
+  }
+}
